@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro EBAC</title>
+</head>
+<h1><em>Seu Cadastro EBAC</em></h1>
+<body>
+    <form>
+        <br \> <br \> <hr \>
+        <label for="nome"><strong>Nome do usuário</strong> </label>
+        <input id="nome" type="text" placeholder="Escreva seu nome aqui">
+        <hr \> <br \> <hr \>
+        <label for="email"><strong>Email do usuário</strong></label>
+        <input id="email" type="email" placeholder="Escreva seu email aqui">
+        <hr \> <br \> <hr \>
+        <label for="senha"><strong>Senha do usuário</strong></label>
+        <input id="senha" type="password" placeholder="Escreva sua senha aqui">
+        <input type="button" value="Exibir Senha" onclick="exibirSenha()">
+        <input type="button" value="Ocultar Senha" onclick="ocultarSenha()">
+        <hr \> <br \> <br \> <br \>
+        <input type="button" value="Cadastrar" onclick="redirecionarParaPagina();">
+    </form>
+    <script>
+        function exibirSenha() {
+            var campoSenha = document.getElementById("senha");
+            campoSenha.type = "text";
+        }
+        function ocultarSenha() {
+            var campoSenha = document.getElementById("senha");
+            campoSenha.type = "password";
+        }
+        function redirecionarParaPagina() {
+            window.location.href = './cadastro_concluido.html';
+        }
+    </script>
+    
+</body>
+</html>
