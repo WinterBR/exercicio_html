@@ -4,6 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro EBAC</title>
+    <script>
+        function ExiOculSenha() {
+            var senhaInput = document.getElementById("senha");
+            if (senhaInput.type === "password") {
+                senhaInput.type = "text";
+            } else {
+                senhaInput.type = "password";
+            }
+        }
+    </script>
 </head>
 <h1><em>Seu Cadastro EBAC</em></h1>
 <body>
@@ -16,25 +26,12 @@
         <input id="email" type="email" placeholder="Escreva seu email aqui">
         <hr \> <br \> <hr \>
         <label for="senha"><strong>Senha do usuário</strong></label>
-        <input id="senha" type="password" placeholder="Escreva sua senha aqui">
-        <input type="button" value="Exibir Senha" onclick="exibirSenha()">
-        <input type="button" value="Ocultar Senha" onclick="ocultarSenha()">
+        <input id="senha" type="password" name="senha" placeholder="Escreva sua senha aqui">
+        <button type="button" onclick="ExiOculSenha()">Mostrar/Esconder Senha</button>
         <hr \> <br \> <br \> <br \>
-        <input type="button" value="Cadastrar" onclick="redirecionarParaPagina();">
-    </form>
-    <script>
-        function exibirSenha() {
-            var campoSenha = document.getElementById("senha");
-            campoSenha.type = "text";
-        }
-        function ocultarSenha() {
-            var campoSenha = document.getElementById("senha");
-            campoSenha.type = "password";
-        }
-        function redirecionarParaPagina() {
-            window.location.href = './cadastro_concluido.html';
-        }
-    </script>
-    
+        <button>
+            <a href="./cadastro_concluido.html">Finalizar</a>
+        </button>    
+    </form>    
 </body>
 </html>
